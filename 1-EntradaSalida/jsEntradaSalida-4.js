@@ -4,6 +4,7 @@
 */
 function Mostrar()
 {
-	
+	var mensaje = prompt ("¿Cómo dormiste hoy?")
+	document.getElementById("elNombre").value = "Asique dormiste " + mensaje + "?";
 }
 

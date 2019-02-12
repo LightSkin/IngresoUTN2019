@@ -7,28 +7,28 @@ var iva = 0.21;
 
 function Sumar () 
 {
-    alert (Get1() + Get2() + Get3());
+    alert ((Get1() + Get2() + Get3()).toFixed(2));
 }
 function Promedio () 
 {
-    alert ((Get1() + Get2() + Get3()) / 3) 
+    alert (((Get1() + Get2() + Get3()) / 3).toFixed(2));
 }
 function PrecioFinal () 
 {
     var temp = Get1() + Get2() + Get3();
-	alert (temp + temp * iva) ;
+	alert ((temp + temp * iva).toFixed(2)) ;
 }
 function Get1 () 
 {
-return parseInt(document.getElementById("PrecioUno").value);
+return parseFloat(document.getElementById("PrecioUno").value);
 }
 
 function Get2 () 
 {
-return parseInt(document.getElementById("PrecioDos").value);
+return parseFloat(document.getElementById("PrecioDos").value);
 }
 
 function Get3 () 
 {
-return parseInt(document.getElementById("PrecioTres").value);
+return parseFloat(document.getElementById("PrecioTres").value);
 }

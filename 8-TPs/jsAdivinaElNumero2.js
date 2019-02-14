@@ -10,7 +10,7 @@ Desde  6 Intentos hasta 10:”falta técnica”
 Más de 10 intentos: “afortunado en el amor!!”.*/
 
 var numeroSecreto; 
-var contadorIntentos;
+var contadorIntentos = 0;
 
 function comenzar() {
 	//Genero el número RANDOM entre 1 y 100
@@ -26,19 +26,23 @@ function comenzar() {
 		  	alert("Usted es un psíquico!")
 			  break;
 			  case 2:
-		  	alert("Usted es un psíquico!")
+		  	alert("Excelente percepción!")
 			  break;
 			  case 3:
-		  	alert("Usted es un psíquico!")
+		  	alert("Esto es suerte")
 			  break;
 			  case 4:
-		  	alert("Usted es un psíquico!")
+		  	alert("Excelente técnica")
 			  break;
 			  case 5:
-		  	alert("Usted es un psíquico!")
+		  	alert("Usted está en la media")
 			  break;
-			  case 6:
-		  	alert("Usted es un psíquico!")
+				case 6:
+				case 7:
+				case 8:
+				case 9:
+				case 10:
+		  	alert("Falta técnica")
 			  break;
 		  default:
 		  alert("Afortunado en el amor!!")

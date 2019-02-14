@@ -7,14 +7,65 @@ y una de las cuatro operaciones básicas (suma, resta,
 se debe informar si el resultado es el correcto o no.
 */
 var respuesta;
-function comenzar()
-{
+var numero1;
+var numero2;
+var operador;
 
-	
+function comenzar() {
+    numero1 = document.getElementById("PrimerNumero").value = RandomNumber(1, 10);
+    numero2 = document.getElementById("SegundoNumero").value = RandomNumber(1, 10);
+    switch (RandomNumber(1, 4)) {
+        case 1:
+            AssignOperator("*");
+            break;
+        case 2:
+            AssignOperator("/");
+            break;
+        case 3:
+            AssignOperator("-");
+            break;
+        default:
+            AssignOperator("+");
+            break;
+    }
+}
 
-}//FIN DE LA FUNCIÓN
-function Responder()
-{
-	
+function Responder() {
+    respuesta = document.getElementById("Respuesta").value;
+    switch (operador) {
+        case "*":
+            if (respuesta == numero1 * numero2)
+                alert("Correcto!!!")
+            else
+                alert("Incorrecto.")
+            break;
+        case "/":
+            if (respuesta == numero1 / numero2)
+                alert("Correcto!!!")
+            else
+                alert("Incorrecto.")
+            break;
+        case "-":
+            if (respuesta == numero1 - numero2)
+                alert("Correcto!!!")
+            else
+                alert("Incorrecto.")
+            break;
+        case "+":
+            if (respuesta == numero1 + numero2)
+                alert("Correcto!!!")
+            else
+                alert("Incorrecto.")
+            break;
+        default:
+            break;
+    }
+}
 
-}//FIN DE LA FUNCIÓN
+function AssignOperator(op) {
+    operador = document.getElementById("Operador").value = op;
+}
+
+function RandomNumber(min, max) {
+    return Math.floor(Math.random() * max + min);
+}

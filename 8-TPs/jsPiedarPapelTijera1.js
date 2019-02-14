@@ -6,24 +6,51 @@ a su opción  y le informaremos si ganó, empató o perdió.
 */
 var eleccionMaquina;
 
-function comenzar()
+function comenzar() {
+    //1 piedra, 2 papel , 3 tijera
+    eleccionMaquina = RandomNumber(1, 3);
+}
+function piedra()//1
 {
-	
+    /*if (eleccionMaquina == 1)
+        alert("La máquina eligió piedra \n Empataste!!")
+    else if (eleccionMaquina == 2)
+        alert("La máquina eligió papel \n Perdiste!!")
+    else
+        alert("La máquina eligió tijera \n Ganaste!!")*/
 
-
-}//FIN DE LA FUNCIÓN
-function piedra()
+    switch (eleccionMaquina) {
+        case 1:
+            alert("La máquina eligió piedra \n Empataste!!");
+            break;
+        case 2:
+            alert("La máquina eligió papel \n Perdiste!!");
+            break;
+        case 3:
+            alert("La máquina eligió tijera \n Ganaste!!");
+            break;
+        default: alert("ERROR"); break;
+    }
+}
+function papel()//2
 {
-	
-
-}//FIN DE LA FUNCIÓN
-function papel()
+    if (eleccionMaquina == 1)
+        alert("La máquina eligió piedra \n Ganaste!!");
+    else if (eleccionMaquina == 2)
+        alert("La máquina eligió papel \n Empataste!!");
+    else
+        alert("La máquina eligió tijera \n Perdiste!!");
+}
+function tijera()//3
 {
+    if (eleccionMaquina == 1)
+        alert("La máquina eligió piedra \n Perdiste!!");
+    else if (eleccionMaquina == 2)
+        alert("La máquina eligió papel \n Ganaste!!");
+    else
+        alert("La máquina eligió tijera \n Empataste!!");
+}
 
-
-}//FIN DE LA FUNCIÓN
-function tijera()
-{
-	
-
-}//FIN DE LA FUNCIÓN
+function RandomNumber(min, max) {
+    return Math.floor(Math.random() * max + min);
+}

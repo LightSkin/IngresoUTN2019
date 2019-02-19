@@ -8,52 +8,7 @@ E.	Si el importe final con descuento suma más de $120  se debe sumar un 10% de 
  ”Usted pago X de IIBB.”, siendo X el impuesto que se pagó. 
 
  */
-function CalcularPrecio() {
-    var precio = 35;
-    var IIBB = 120;
-
-    var cantidad = parseInt(document.getElementById("Cantidad").value);
-    var marca = document.getElementById("Marca").value;
-    var precioFinal;
-
-    if (cantidad >= 6) {
-        precioFinal = (cantidad * precio) - (cantidad * precio * 0.5);
-    }
-    if (cantidad == 5) {
-        if (marca == "ArgentinaLuz")
-            precioFinal = (cantidad * precio) - (cantidad * precio * 0.4);
-        else
-            precioFinal = (cantidad * precio) - (cantidad * precio * 0.3);
-    }
-    if (cantidad == 4) {
-        if (marca == "ArgentinaLuz" || marca == "FelipeLamparas")
-            precioFinal = (cantidad * precio) - (cantidad * precio * 0.25);
-        else
-            precioFinal = (cantidad * precio) - (cantidad * precio * 0.2);
-    }
-    if (cantidad == 3) {
-        switch (marca) {
-            case "ArgentinaLuz":
-                precioFinal = (cantidad * precio) - (cantidad * precio * 0.15);
-                break;
-            case "FelipeLamparas":
-                precioFinal = (cantidad * precio) - (cantidad * precio * 0.1);
-                break;
-            default:
-                precioFinal = (cantidad * precio) - (cantidad * precio * 0.05);
-                break;
-        }
-    }
-    if (cantidad <= 2 && cantidad > 0) {
-        precioFinal = (cantidad * precio);
-    }
-
-    if (precioFinal > IIBB) {
-        var temp = precioFinal * 0.1;
-        alert("Usted pago $" + temp + " de IIBB.")
-    }
-    if (cantidad <= 0)
-        alert("Por favor ingrese una cantidad válida.")
-    else
-        document.getElementById("precioDescuento").value = precioFinal;
+function CalcularPrecio () 
+{
+ 	
 }
